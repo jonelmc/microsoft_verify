@@ -1,1 +1,21 @@
-#iclude"stdio.h"
+
+//4.	从键盘输入10名学生的C语言程序设计成绩，要求统计出优秀（100 - 90）、良好（89 - 70）、及格（69 - 60）、不及格（60分以下）的人数。
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+	int i,n, you=0, liang=0, ji=0, bu=0;
+	printf("输入10名学生的C语言程序设计成绩:\n");
+	for (i = 1; i <= 10; i++)
+	{
+		scanf_s("%d", &n);
+		if (n > 100) printf("输入错误！");
+		else if (n >= 90) you++;
+		else if (n >= 70) liang++;
+		else if(n >= 60) ji++;
+		else if (n >= 00) bu++;
+		else printf("输入错误！");
+	}
+	printf("优秀：%d；良好：%d；及格：%d；不及格：%d\n", you, liang, ji, bu);
+	system("pause");
+}
